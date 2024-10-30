@@ -11,8 +11,8 @@ int func(int round)
     return 0;
   }
   int local_var = round; // เพิ่มตัวแปร local ใน stack
-  printf("Address stack round %d: %p\n", round, &round);
-  printf("Address local_var %d: %p\n", round, &local_var);
+  printf("Address stack round %d: %p\n", 4 - round, &round);
+  printf("Address local_var %d: %p\n", 4 - round, &local_var);
   return func(round - 1);
 }
 
